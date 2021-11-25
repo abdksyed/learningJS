@@ -51,7 +51,157 @@ var listPrice = 799
 var salePrice = 199
 var discount = ( (listPrice - salePrice)/listPrice ) * 100;
 console.log(`${discount}%`);
+// > 75.09386733416771%
 
 // ? Why no var and just calling Math imports it? or it's already present in global?
 displayDiscount = Math.round(discount);
 console.log(`${displayDiscount}%`);
+// > 75%
+
+console.log(typeof discount);
+// > number
+console.log(typeof displayDiscount);
+// > number
+console.log(typeof fullName);
+// > string
+console.log(typeof amICorrect);
+// > boolean
+
+
+// Operator Precedence
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+// Conditionals
+
+if (' ') {
+    console.log('This is True');
+}
+// > This is True
+
+if (1) {
+    console.log('This is True');
+}
+// > This is True
+
+if ('FALSE'){
+    console.log('This is True');
+}
+// > This is True
+
+if (true) {
+    console.log('This is True');
+}
+// > This is True
+
+if (false) {
+    console.log('This is NOT going to be Printed');
+}
+// >
+
+if (0) {
+    console.log('This is NOT going to be Printed');
+}
+// >
+
+if (''){
+    console.log('This is NOT going to be Printed');
+}
+// >
+
+if (null){
+    console.log('This is NOT going to be Printed');
+}
+// >
+
+if (0) {
+    console.log('This is NOT going to be Printed');
+}
+// >
+
+var iAmGoingToBeUndefined;
+if (iAmGoingToBeUndefined) {
+    console.log('This is NOT going to be Printed');
+}
+// >
+
+// 0, false, '',  null, NaN, undefined are `Falsy` values
+// Anything else is `Truthy`
+// ? No idea on empty list(array) or empty dictionary(object)
+
+// Condtional Operators
+
+var isEmployee = true;
+var isLoggenIn = true;
+var isAdmin = true;
+
+if (isEmployee) {
+    if (isLoggenIn) {
+        if (isAdmin) {
+            console.log('Welcome Mr. Adminva');
+        }
+    }
+}
+// > Welcome Mr. Adminva
+
+// Better
+
+if (isEmployee && isLoggenIn && isAdmin) {
+    console.log('Welcome Mr. Adminva');
+}
+else {
+    console.log('You are not authorized');
+}
+// > Welcome Mr. Adminva 
+
+var isMom = false;
+var isDad = false;
+var isSister = true;
+
+if (isMom || isDad || isSister) {
+    console.log('You are a family member');
+}
+else {
+    console.log('Kaun hai miya tum??r');
+}
+// > You are a family member
+
+
+// Ternary Operator
+
+var authenticated = true;
+
+if (authenticated) {
+    console.log('Welcome');
+}
+else {
+    console.log('Show login Options');
+}
+
+console.log(authenticated ? 'Welcome' : 'Show login Options');
+
+// Switch and Case Statements
+
+var userType = 'Analyst';
+
+switch (userType) {
+    case 'Manager':
+        console.log('Welcome Manager');
+        break;
+    case 'Admin':
+        console.log('Welcome Admin');
+        break;
+    case 'Developer':
+        console.log('Welcome Developer');
+        break;
+    case 'Tester':
+        console.log('Welcome Tester');
+        break;
+    case 'Analyst':
+        console.log('Welcome Analyst');
+        break;
+    default:
+        console.log('Welcome');
+} 
+
+// Type Coercion
+
