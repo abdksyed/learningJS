@@ -205,3 +205,39 @@ switch (userType) {
 
 // Type Coercion
 
+console.log("2" + 2);
+// > 22
+// Here JS is converting `number 2` to string and then adding `string 2` to it.
+// This is done by Java Script under the hood. 
+
+console.log("2" + "2");
+// > 22
+
+var user = 2;
+if (user == "2"){
+    console.log('Condition should be false, but........ Why Am I getting Printed???');
+}
+// > Condition should be false, but........ Why Am I getting Printed???
+
+var user = "2";
+if (user == 2){
+    console.log('Condition should be false, but........ Why Am I getting Printed???');
+}
+// > Condition should be false, but........ Why Am I getting Printed???
+
+// As we can see the var user is different type than being matched in if statement,
+// but it's still giving true and executing the console.log statement.
+// This is because we are using `==` which is a weak(loosely) matching.
+// It checks if value is `2` irrespective of the type.
+
+var user = 2;
+if (user === "2"){
+    console.log('Condition should be false, and I will NOT be printed');
+}
+// >
+
+var user = "2";
+if (user === 2){
+    console.log('Condition should be false, and I will NOT be printed');
+}
+// >
