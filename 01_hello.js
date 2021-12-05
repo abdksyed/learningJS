@@ -5,15 +5,15 @@ console.log(fullName); //Hoisting
 // > undefined
 
 var fullName = 'ThisIsMyName';
-console.log(fullName);
+console.log(fullName, typeof fullName);
 // > ThisIsMyName
 
 var amICorrect = true;
-console.log("Am I Correct?", amICorrect);
+console.log("Am I Correct?", amICorrect, typeof amICorrect);
 // > Am I Correct?  true
 
 var myNumber = 47;
-console.log(myNumber);
+console.log(myNumber, typeof myNumber);
 // > 47
 
 var noVar;
@@ -73,55 +73,35 @@ console.log(typeof amICorrect);
 
 // Conditionals
 
-if (' ') {
-    console.log('This is True');
-}
+if (' ') console.log('This is True');
 // > This is True
 
-if (1) {
-    console.log('This is True');
-}
+if (1) console.log('This is True');
 // > This is True
 
-if ('FALSE'){
-    console.log('This is True');
-}
+if ('FALSE') console.log('This is True');
 // > This is True
 
-if (true) {
-    console.log('This is True');
-}
+if (true) console.log('This is True');
 // > This is True
 
-if (false) {
-    console.log('This is NOT going to be Printed');
-}
+if (false) console.log('This is NOT going to be Printed');
 // >
 
-if (0) {
-    console.log('This is NOT going to be Printed');
-}
+if (0) console.log('This is NOT going to be Printed');
 // >
 
-if (''){
-    console.log('This is NOT going to be Printed');
-}
+if ('') console.log('This is NOT going to be Printed');
 // >
 
-if (null){
-    console.log('This is NOT going to be Printed');
-}
+if (null) console.log('This is NOT going to be Printed');
 // >
 
-if (0) {
-    console.log('This is NOT going to be Printed');
-}
+if (0) console.log('This is NOT going to be Printed');
 // >
 
 var iAmGoingToBeUndefined;
-if (iAmGoingToBeUndefined) {
-    console.log('This is NOT going to be Printed');
-}
+if (iAmGoingToBeUndefined) console.log('This is NOT going to be Printed');
 // >
 
 // 0, false, '',  null, NaN, undefined are `Falsy` values
